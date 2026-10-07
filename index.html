@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .header{
+            background-color: black;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: aliceblue;
+        }
+        p{
+            margin-left: 20px;
+        }
+        ul{
+            margin-right: 20px;
+        }
+        
+        li{
+            display: inline;
+            padding: 20px;
+            
+            
+        }
+        @media(max-width:700px){
+            .header{
+                background-color: blueviolet;
+            }
+            .header p{
+                font-size: 50px;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+
+
+        }
+        @media screen and (max-width:400px){
+            .header{
+                background-color: rgb(43, 186, 226);
+            }
+            .header p{
+                font-size: 80px;
+            }
+
+        }
+        li:hover{
+            color:rgb(20, 24, 145);
+            cursor: pointer;
+        }
+        li a {
+    text-decoration: none;
+    color: white;
+}
+@media screen  and (max-width:600px){
+    li{
+       display: block;
+            padding: 20px; 
+    }
+    
+}
+
+li a:hover {
+    color: #60a5fa;
+}html {
+    scroll-behavior: smooth;
+}
+    input{
+            width: 60%;
+            border-color: black;
+            border-radius: 10px;
+            padding: 10px;
+            
+        }
+        .search{
+            position: sticky;
+            top: 20px;
+            padding: 20px;
+            text-align: center;
+        }
+        .box{
+            margin: 20px;
+            border:5px black solid;
+            display: inline-block;
+            width: 300px;
+        }
+        .box:hover{
+            color: blueviolet;
+            border-radius: 20px;
+        }
+        .Product{
+            
+            text-align: center;
+            
+        }
+        .about{
+            text-align: center;
+            padding: 70px;
+        }
+        .contact{
+            padding: 20px;
+            color: blanchedalmond;
+            background-color: black;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+<div class="header" id="home">
+    <p>TS</p>
+    <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#product">Product</a></li>
+    <li><a href="#about">About Us</a></li>
+    <li><a href="#contact">Contact</a></li>
+</ul>
+</div>
+<div class="search">
+    <input type="search"  placeholder="search">
+</div>
+<div class="Product" id="product">
+    <div class="box">
+        <img src="image.png">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ullam, nihil reprehenderit soluta ad laborum similique architecto et, eos voluptatum hic, culpa magni qui tempore consectetur error quaerat a cupiditate.</p>
+    </div>
+    <div class="box">
+        <img src="image.png">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ullam, nihil reprehenderit soluta ad laborum similique architecto et, eos voluptatum hic, culpa magni qui tempore consectetur error quaerat a cupiditate.</p>
+    </div>
+    <div class="box">
+        <img src="image.png">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ullam, nihil reprehenderit soluta ad laborum similique architecto et, eos voluptatum hic, culpa magni qui tempore consectetur error quaerat a cupiditate.</p>
+    </div>
+</div>
+<div class="about" id="about">
+    <h1 >About us</h1>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur repellat voluptates incidunt? Corporis veniam necessitatibus repudiandae itaque laborum nobis sapiente labore amet adipisci? Laboriosam odio error amet id ratione beatae delectus optio, tempora voluptate, consequatur itaque nam qui alias voluptates nisi? Vel maxime eligendi voluptate nihil quaerat quidem officia rerum alias voluptates, pariatur expedita corporis incidunt earum sequi fuga magni exercitationem amet tempora aperiam est aliquam obcaecati ab! Libero odit aspernatur natus, dolores temporibus accusamus sequi fuga quidem sint corrupti facere officiis porro, similique soluta molestiae esse reprehenderit, nihil totam! Unde quasi aliquam nulla veritatis laboriosam asperiores molestias soluta dolor.</p>
+</div>
+   <div class="contact" id="contact">
+        <h3>Contact</h3>
+        <h3>+91987654321</h3>
+        <h2>ts@gmail.com</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam cum et officiis, voluptatem placeat excepturi quae velit tenetur numquam omnis nam quia facilis non magnam at provident atque assumenda alias doloribus ea! Est quo eaque quam dicta, nesciunt omnis id iure hic voluptatem possimus esse a voluptas consequatur laborum quasi mollitia quae explicabo at incidunt vel ex illum. Dolore hic sit mollitia iure quisquam beatae, eius rem? Ducimus exercitationem quas totam unde natus consequatur quisquam, nobis pariatur doloremque illo doloribus adipisci, id odit incidunt. Cum vel nam numquam perspiciatis sed qui ea debitis, dolores atque quae veniam impedit quo consectetur minus dicta, nihil animi sapiente, ducimus nisi laborum! Necessitatibus quisquam sunt ipsa fugit consequatur iste porro maxime quibusdam nisi suscipit, accusamus, voluptatum beatae illum totam aperiam facilis earum, aut error temporibus ex repellat quasi. Maxime nesciunt asperiores repellat explicabo nemo ipsa maiores, omnis laborum perferendis rem illum, ratione dolores aliquam vel iste officia modi sed sit? Veniam nihil eius sit. Debitis itaque atque nostrum ducimus, molestiae nemo quidem facere odio voluptatum dolor accusamus fugit amet consequuntur, enim iusto nulla perferendis qui repellendus vel inventore laudantium aliquam! Odit, veritatis maxime consequuntur rem optio enim. Perspiciatis debitis fuga repudiandae vel consequatur id.</p>
+    </div>
+    <script>
+        let user = {
+    name: "sakthi",
+    dept: "cse",
+    id: 1
+};console.log(user.dept);
+        user.dept = "ece";
+        console.log(user.dept);
+    </script>
+    
+</body>
+</html>

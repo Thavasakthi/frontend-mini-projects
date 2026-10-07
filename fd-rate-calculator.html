@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            
+        }
+        .main{
+            
+            
+            border-radius: 20px;
+            margin-top: 40px;
+            text-align: center;
+          
+
+            background-color: beige;
+            width: 300px;
+            height: 500px;
+        }
+        h2{
+            
+            padding: 20px;
+            font-size: 40px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        
+
+        .in {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    
+    
+}
+            
+        input{
+            padding: 5px;
+            border: 2px solid black ;
+            border-radius: 10px;
+        }
+        button{
+            padding: 5px;
+            color: rgb(254, 254, 254);
+            background-color: rgb(0, 7, 13);
+            font-style: italic;
+            border-radius: 20px;
+
+        }
+        button:hover{
+            color: black;
+            background-color: aliceblue;
+            font-style: italic;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h2> FD Rate calculator</h2>
+        <div class="in">
+            <input type="number" id="celsius" placeholder="tenure months">
+        <button  onclick="fdRate()" >Calculate</button>
+        </div>
+        
+        <p id="result"></p>
+
+    </div>
+    <script>
+        function fdRate(){
+           const month=document.getElementById("celsius").value; 
+           let Rate=0;
+           if(month<3){
+            Rate=5.8;
+              
+           }else if (month>=3 && month<=6) {
+             Rate=6.5;
+            
+           } else if(month>=7 &&month<=9){
+        Rate=6.8;
+           }else if(month>=10) {
+            Rate=7;
+            
+           }
+           let result=document.querySelector("#result");
+           result.innerHTML="Your interest rate is " + Rate+"%";
+           result.innerHTML=`Your interest rate is ${Rate} %`;
+
+        }
+        
+    </script>
+</body>
+</html>

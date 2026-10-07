@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: black;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+      .main {
+        border-radius: 20px;
+        margin-top: 40px;
+        text-align: center;
+
+        background-color: beige;
+        width: 300px;
+        height: 500px;
+      }
+      h2 {
+        padding: 20px;
+        font-size: 40px;
+        font-family: Georgia, "Times New Roman", Times, serif;
+      }
+
+      .in {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+      }
+
+      input {
+        padding: 5px;
+        border: 2px solid black;
+        border-radius: 10px;
+      }
+      button {
+        padding: 10px;
+        font-size: larger;
+        color: rgb(254, 254, 254);
+        background-color: rgb(0, 7, 13);
+        font-style: italic;
+        border-radius: 20px;
+      }
+      button:hover {
+        color: black;
+        background-color: aliceblue;
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <h2>palindrome checker</h2>
+      <div class="in">
+        <input type="text" id="palindrome" placeholder="enter you words" />
+        <button onclick="palin()">check</button>
+      </div>
+
+      <p id="result"></p>
+    </div>
+    <script>
+      function palin() {
+        //            const str=document.getElementById("palindrome").value;
+        //            let rest="";
+        //            let reverse=str.split("").reverse().join("");
+
+        //            if (str.toLowerCase() === reverse.toLowerCase()) {
+        //             rest="palindrome";
+
+        // }
+        // else{
+        //     rest="not palindrome";
+
+        // }
+        const str = document.getElementById("palindrome").value;
+        let ispalidrome=true;
+        for(let i=0;i<=str.length/2;i++){
+            if (str[i] !== str[str.length - 1 - i]){
+                ispalidrome=false;
+                break;
+            }
+        }
+        let rest;
+        if(ispalidrome){
+            rest="palindrome"
+        }
+        else{
+            rest="not palindrome"
+        }
+
+        let result = document.querySelector("#result");
+
+        result.innerHTML = `"${str}" is ${rest}`;
+      }
+    </script>
+  </body>
+</html>

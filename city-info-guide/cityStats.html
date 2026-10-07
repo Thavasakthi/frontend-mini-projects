@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Status</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <h1>City Status</h1>
+
+        <label for="city">Choose a City:</label>
+
+        <select id="city" name="city">
+            <option value="">Select a city</option>
+            <option value="Mumbai">Mumbai</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Chennai">Chennai</option>
+        </select>
+
+        <button type="button">Display Status</button>
+
+        <div id="result"></div>
+    </div>
+
+    <script>
+        const button = document.querySelector("button");
+
+        button.addEventListener("click", display);
+
+        function display() {
+            let input = document.getElementById("city");
+            const city = input.options[input.selectedIndex].value;
+
+            let State = "";
+            let Famous = "";
+            let Known = "";
+
+            switch (city) {
+                case "Mumbai":
+                    State = "Maharashtra";
+                    Famous = "Gateway of India, Bollywood";
+                    Known = "Financial capital of India";
+                    break;
+
+                case "Delhi":
+                    State = "National Capital Territory of Delhi";
+                    Famous = "India Gate, Red Fort";
+                    Known = "National capital of India";
+                    break;
+
+                case "Chennai":
+                    State = "Tamil Nadu";
+                    Famous = "Marina Beach, Kapaleeshwarar Temple";
+                    Known = "Gateway to South India";
+                    break;
+
+                default:
+                    document.getElementById("result").textContent =
+                        "Please select a city.";
+                    return;
+            }
+
+            let text = `${city} is located in ${State}. It is famous for ${Famous}. It is known as the ${Known}.`;
+
+            document.getElementById("result").textContent = text;
+        }
+    </script>
+</body>
+</html>

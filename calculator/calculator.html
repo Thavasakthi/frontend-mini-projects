@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>City Status</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main">
+      <h1>City Status</h1>
+
+      <label for="city">Enter number for calculator:</label>
+
+      <textarea id="city" placeholder="Enter numbers"></textarea>
+
+    
+
+      <div id="result"></div>
+    </div>
+
+    <script>
+      
+
+      let input = document.getElementById("city");
+      input.addEventListener("input",display);
+
+      function display() {
+        
+        const city = input.value.trim();
+
+        let a = 0;
+        let b = 0;
+        let cal = 0;
+        let oparetor = "";
+        if (city.includes("+")) {
+          oparetor = "+";
+        } else if (city.includes("-")) {
+          oparetor = "-";
+        } else if (city.includes("*")) {
+          oparetor = "*";
+        } else if (city.includes("/")) {
+          oparetor = "/";
+        } else {
+          document.getElementById("result").textContent =
+            "Please enter a valid calculation";
+        }
+        let val = city.split(oparetor);
+        a = Number(val[0]);
+        b = Number(val[1]);
+
+        switch (oparetor) {
+          case "+":
+            cal = a + b;
+            break;
+
+          case "-":
+            cal = a - b;
+            break;
+
+          case "*":
+            cal = a * b;
+            break;
+          case "/":
+            if (b === 0) {
+              document.getElementById("result").textContent =
+                "Cannot divide by zero";
+              return;
+            } else {
+              cal = a / b;
+            }
+
+            break;
+
+          default:
+            document.getElementById("result").textContent =
+              "Please Enter number";
+            return;
+        }
+
+        document.getElementById("result").textContent = cal;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgba(0, 255, 255, 0.211);
+            text-align: center;
+        }
+        .main{
+            display: inline-block;
+            text-align: center;
+            width:200px ;
+            height: 200px;
+            background-color: black;
+
+        }
+        button{
+            
+            background-color: rgba(140, 140, 209, 0.26);
+            padding: 10px;
+            margin: 5px;
+            border-radius: 20px;
+            border-style: solid;
+            border-color: beige;
+        }
+        button:hover{
+            color: #000;
+            cursor: pointer;background-color: azure;
+        }
+    </style>
+    
+</head>
+<body>
+    <p>fgftgfttrttrtrt</p>
+    <p>gftyydststrerydtt</p>
+    <p>vgddreferswrere</p>
+    <h1 style="color: blueviolet; background-color: rgb(186, 186, 195); padding: 20px; border-radius: 10px; text-align: center;">WELCOME</h1>
+    <div class="main">
+    <img src="image.png">
+    <button onclick="nextpage()" class="btn">Get start</button>
+</div>
+
+<h1 id="app"></h1>
+
+<script>
+    document.getElementById("app").innerHTML = "This is for practices";
+
+document.getElementsByClassName("btn")[0].style.color = "red";
+document.querySelector("p").style.color="blue";
+        
+
+function nextpage() {
+    window.location.href = "celsius-to-fahrenheit.html";
+}
+ 
+// let items=5;
+// let amount=95;
+// let msg=`You have ${items} items in your cart.
+// your bill amount is $ ${amount}.`;
+// console.log(msg);
+// let array=[2,4,1,"ddd",0,['ww','dff','ddd']];
+// console.log(array);
+// console.log(array[5]);
+// console.log(array.length);
+// console.log(array[5][1]);
+// let aaa=[1,2,3,4,5,6];
+// console.log(aaa.push(9));
+// console.log(aaa);
+
+// console.log(aaa.pop());
+// console.log(aaa);
+// console.log(aaa.shift());
+// console.log(aaa);
+// console.log(aaa.unshift("a"));
+// console.log(aaa);
+// console.log(aaa.splice(4,1,"a"));
+// console.log(aaa);
+// console.log(aaa.splice(4,2));
+// console.log(aaa);
+// console.log(aaa.slice(2,4));
+// console.log(aaa);
+// console.log(aaa.join());
+
+let arr=[5,8,10,7,9,11];
+console.log(arr);
+console.log(arr.splice(3,3,17,19,111));
+console.log(arr);
+console.log(arr.unshift(100));
+console.log(arr);
+arr.splice(arr.length - 1, 0, 200);
+console.log(arr);
+console.log(arr.push(1000));
+console.log(arr);
+console.log(arr.splice(4,1,0));
+console.log(arr);
+console.log(arr.length);
+console.log(arr[Math.floor(arr.length / 2)]);
+
+
+
+
+
+    </script>
+</body>
+</html>
