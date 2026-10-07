@@ -33,14 +33,15 @@ select {
 
     let arr = ['ECE', 'CSE', 'IT', 'EEE', 'MECH', 'CIVIL'];
 
-    for (let i = 0; i < arr.length; i++) {
-        let option = document.createElement("option");
+    arr.forEach((element,index,arr) => {
+    let option = document.createElement("option");
 
-        option.textContent = arr[i];
+    option.textContent = arr[index];
 
-        list.appendChild(option);
-    }
+    list.appendChild(option);
+});
 };
+
 
 addoption();
 
